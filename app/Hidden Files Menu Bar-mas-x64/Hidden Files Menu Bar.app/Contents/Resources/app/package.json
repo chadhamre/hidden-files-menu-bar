@@ -1,0 +1,34 @@
+{
+  "name": "hidden-files-menu-bar",
+  "version": "1.0.0",
+  "description": "quickly toggled between hiding and showing hidden files in finder",
+  "main": "main.js",
+  "repository": "https://github.com/chadhamre/hidden.git",
+  "author": "Chad Hamre <chadhamre@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "electron-builder": "^19.48.2",
+    "electron-packager": "^10.1.0",
+    "electron-prebuilt": "^1.4.13"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.chadhamre.hidden",
+    "productName": "Hidden Files Menu Bar",
+    "icon": "build/icon.icns",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "mas",
+      "type": "distribution"
+    },
+    "mas": {
+      "entitlements": "build/entitlements.mas.plist",
+      "identity": ""
+    }
+  }
+}
